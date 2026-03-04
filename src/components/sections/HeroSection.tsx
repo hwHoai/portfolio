@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -27,13 +28,12 @@ export const HeroSection = () => {
             >
               Contact me
             </a>
-            <a
-              href="/resume.pdf"
-              download
+            <Link
+              href="/resume"
               className="px-7 py-3 rounded-full border border-border-accent text-text-primary font-medium text-sm hover:bg-brand-muted transition-colors duration-200"
             >
               Download Resume
-            </a>
+            </Link>
           </div>
         </div>
 

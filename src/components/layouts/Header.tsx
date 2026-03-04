@@ -1,6 +1,7 @@
 "use client";
 
 import NavigaitonLink from "@/constants/NavigationLink";
+import Link from "next/link";
 import { useState } from "react";
 
 export const Header = () => {
@@ -10,23 +11,23 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50  backdrop-blur-sm bg-bg-transparent">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a
-          href="#"
+        <Link
+          href="/"
           className="text-text-primary font-semibold text-lg tracking-wide hover:text-brand transition-colors duration-200"
         >
           Đào Hữu Hoài<span className="text-brand">.</span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {NavigaitonLink.getAllLinks().map(({ label, href }) => (
-            <a
+            <Link
               key={href}
               href={href}
               className="text-text-secondary text-sm hover:text-text-primary transition-colors duration-200"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 

@@ -9,7 +9,6 @@ export default function MainContent() {
   return (
     <div className="relative w-full h-full flex flex-col grow justify-start">
       <HeroSection />
-      {/* ── Scroll-down indicator ── */}
       <ScrolldownIndicator />
       <AboutSection />
       <ExperienceSection />
