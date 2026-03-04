@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Backgrounds ───────────────────────────────────────── */
+  --color-bg-primary: #091525; /* main dark-navy page background  */
+  --color-bg-secondary: #0d1f3a; /* section / elevated surface      */
+  --color-bg-card: #102040; /* card backgrounds                */
+
+  /* ── Brand / Accent ────────────────────────────────────── */
+  --color-brand: #5b5bd6; /* primary purple-indigo accent    */
+  --color-brand-hover: #4a4ac4; /* hover / pressed state           */
+  --color-brand-muted: rgba(91, 91, 214, 0.15); /* subtle tinted surface */
+
+  /* ── Text ──────────────────────────────────────────────── */
+  --color-text-primary: #ffffff; /* headings & emphasis             */
+  --color-text-secondary: #cfd7e3; /* body / supporting text          */
+  --color-text-muted: #64748b; /* captions, placeholders          */
+
+  /* ── Borders ───────────────────────────────────────────── */
+  --color-border: rgba(255, 255, 255, 0.1); /* default dividers   */
+  --color-border-accent: rgba(91, 91, 214, 0.4); /* accent outlines    */
+
+  /* ── Fonts ─────────────────────────────────────────────── */
+  --font-display: "Inter", sans-serif;
+
+  /* ── Animations ─────────────────────────────────────────── */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 3s infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-pulse-glow: pulse-glow 4s ease-in-out infinite;
+  --animate-scroll-dot: scroll-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(91, 91, 214, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(91, 91, 214, 0.55);
+  }
+}
+
+@keyframes scroll-dot {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+:root {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+  font-family: var(--font-display);
+}
+
+/* Custom Utilities */
+@utility text-gradient {
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+}
+
+@utility brand-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+}
