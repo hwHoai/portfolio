@@ -12,7 +12,7 @@ export default function ResumePage() {
     `/${encodeURIComponent(filename)}`;
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20 animate-fade-in relative z-10">
+    <div className="container mx-auto px-4 py-16 md:py-20 animate-fade-in relative z-10">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient-text pb-2">

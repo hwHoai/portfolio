@@ -8,7 +8,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-150 h-150 rounded-full bg-brand opacity-10 blur-[120px]" />
       </div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full grid grid-cols-1  md:grid-cols-2 gap-12 items-center py-24 md:py-0">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full grid sm:grid-cols-2 gap-12 items-center py-24 md:py-0">
         {/* ── Left: Text content ── */}
         <div className="flex flex-col gap-6">
           <h1 className="text-5xl md:text-6xl font-bold text-text-primary leading-tight">

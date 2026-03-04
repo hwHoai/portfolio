@@ -6,7 +6,7 @@ export const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative bg-bg-secondary py-16 rounded-4xl mx-[10%] overflow-hidden"
+      className="relative bg-bg-secondary py-16 lg:rounded-4xl lg:mx-[10%] overflow-hidden"
     >
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* ── Section header ── */}

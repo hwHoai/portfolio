@@ -42,11 +42,14 @@ export const ExperienceSection = () => {
                 }`}
               >
                 <div
-                  className={`flex items-center gap-2 text-sm text-text-muted bg-bg-primary/50 px-3 py-1.5 ${
-                    index % 2 != 0 ? "rounded-l-full" : "rounded-r-full"
+                  className={`hidden md:flex flex-col md:flex-row items-center gap-2 text-sm max-lg:text-[10px] text-text-muted bg-bg-primary/50 px-3 py-1.5 ${
+                    index % 2 != 0
+                      ? "max-md:rounded-full sm:rounded-l-full"
+                      : "max-md:rounded-full sm:rounded-r-full"
                   } w-fit border border-border-accent  `}
                 >
-                  {item.company} |
+                  <span>{item.company}</span>
+                  <span>|</span>
                   <Calendar className="w-4 h-4" />
                   <span>{item.period}</span>
                 </div>
@@ -61,7 +64,7 @@ export const ExperienceSection = () => {
 
               {/* Content Card Wrapper */}
               <div
-                className={`w-full md:w-1/2 pl-16 md:pl-0 ${
+                className={`w-full md:w-1/2 pl-10 md:pl-0 ${
                   index % 2 === 0 ? "md:pr-16" : "md:pl-16"
                 }`}
               >
@@ -70,6 +73,9 @@ export const ExperienceSection = () => {
                     <h3 className="text-xl font-bold text-text-primary group-hover:text-brand transition-colors">
                       {item.role}
                     </h3>
+                    <span className=" px-3 py-1.5 rounded-full text-[0.8rem] text-text-muted w-fit mt-1">
+                      {item.company}
+                    </span>
                   </div>
 
                   <ul className="flex flex-col text-sm text-text-secondary leading-relaxed list-disc list-inside marker:text-brand">
@@ -79,6 +85,19 @@ export const ExperienceSection = () => {
                       </li>
                     ))}
                   </ul>
+                  <div
+                    className={`flex md:w-1/2 pl-4 md:pl-0 flex-row-reverse items-center mt-2`}
+                  >
+                    <div
+                      className={`hidden max-md:flex flex-col items-center gap-2 text-sm text-text-muted
+                      w-fit`}
+                    >
+                      <div className="flex items-center gap-1 border border-border-accent bg-bg-primary/50 px-3 py-1.5 rounded-full">
+                        <Calendar className="w-4 h-4" />
+                        <span>{item.period}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
