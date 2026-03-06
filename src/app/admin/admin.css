@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Admin Dashboard Theme */
+@theme {
+  /* Light theme colors matching the dashboard design */
+  --color-admin-bg: #f9fafb;
+  --color-admin-sidebar: #ffffff;
+  --color-admin-card: #ffffff;
+  --color-admin-border: #e5e7eb;
+  --color-admin-hover: #f3f4f6;
+
+  --color-admin-text-primary: #111827;
+  --color-admin-text-secondary: #6b7280;
+  --color-admin-text-muted: #9ca3af;
+
+  --color-admin-accent: #6366f1;
+  --color-admin-accent-hover: #4f46e5;
+  --color-admin-accent-light: #eef2ff;
+
+  --color-admin-success: #10b981;
+  --color-admin-success-light: #d1fae5;
+  --color-admin-warning: #f59e0b;
+  --color-admin-warning-light: #fef3c7;
+  --color-admin-error: #ef4444;
+  --color-admin-error-light: #fee2e2;
+
+  --color-admin-purple: #8b5cf6;
+  --color-admin-blue: #3b82f6;
+  --color-admin-cyan: #06b6d4;
+  --color-admin-pink: #ec4899;
+}
+
+/* Custom admin utilities */
+@utility admin-card {
+  background-color: var(--color-admin-card);
+  border: 1px solid var(--color-admin-border);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+@utility admin-shadow {
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
