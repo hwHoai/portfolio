@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 
 interface PowerData {
-  cpuWatts: number;
-  systemOffsetWatts: number;
-  totalWatts: number;
+  method: string;
+  cpuUsagePercent: number;
+  estimatedWatts: number;
+  idleWatts: number;
+  maxWatts: number;
   monthlyCostVND: number;
   monthlyCostVNDFormatted: string;
   available: boolean;
@@ -13,7 +15,7 @@ interface PowerData {
   message?: string;
 }
 
-export const AdminTotalRevenue = () => {
+export const AdminTotalPower = () => {
   const [powerData, setPowerData] = useState<PowerData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -55,7 +57,9 @@ export const AdminTotalRevenue = () => {
           <div className="text-xs font-medium opacity-90 mb-1">
             Power Consumption
           </div>
-          <div className="text-2xl font-bold mb-1">Loading...</div>
+          <div className="h-8 flex items-center">
+            <div className="w-6 h-6 border-3 border-white border-t-transparent rounded-full animate-spin"></div>
+          </div>
         </div>
       </div>
     );
@@ -81,15 +85,15 @@ export const AdminTotalRevenue = () => {
       <div className="absolute top-0 right-0 w-20 h-20 bg-white opacity-10 rounded-full -mr-8 -mt-8"></div>
       <div className="relative z-10">
         <div className="text-xs font-medium opacity-90 mb-1">
-          Cost per Month
+          Cost per month
         </div>
         <div className="text-2xl font-bold mb-1">
           {powerData.monthlyCostVNDFormatted} ₫
         </div>
         <div className="flex items-center gap-1 text-xs">
-          <span className="py-0.5">{powerData.totalWatts}W</span>
+          <span className="py-0.5">{powerData.estimatedWatts}W</span>
           <span className="opacity-75">
-            (CPU: {powerData.cpuWatts}W + {powerData.systemOffsetWatts}W)
+            (CPU: {powerData.cpuUsagePercent}%)
           </span>
         </div>
       </div>
@@ -97,4 +101,4 @@ export const AdminTotalRevenue = () => {
   );
 };
 
-export default AdminTotalRevenue;
+export default AdminTotalPower;

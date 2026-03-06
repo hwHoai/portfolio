@@ -1,6 +1,6 @@
 import AdminPortfolioViewCard from "@/components/cards/AdminPortfolioViewCard";
 import AdminServerStatus from "@/components/cards/AdminServerStatus";
-import AdminTotalRevenue from "@/components/cards/AdminTotalRevenue";
+import AdminTotalRevenue from "@/components/cards/AdminTotalPower";
 import AdminTotalViewCard from "@/components/cards/AdminTotalViewCard";
 
 export const AdminTopMetricCardSection = () => {
