@@ -2,7 +2,7 @@ import Experience from "@/constants/Experience";
 import { Calendar } from "lucide-react";
 
 /* ── Component ────────────────────────────────────────────────────── */
-export const ExperienceSection = () => {
+const ExperienceSection = () => {
   return (
     <section
       id="experience"
@@ -107,3 +107,5 @@ export const ExperienceSection = () => {
     </section>
   );
 };
+
+export default ExperienceSection;

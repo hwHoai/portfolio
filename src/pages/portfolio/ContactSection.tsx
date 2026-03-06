@@ -4,7 +4,7 @@ import { Send, Terminal } from "lucide-react";
 import { useState } from "react";
 
 /* ── Component ────────────────────────────────────────────────────── */
-export const ContactSection = () => {
+export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

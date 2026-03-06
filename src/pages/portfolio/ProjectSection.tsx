@@ -6,7 +6,7 @@ import { Github, ExternalLink, FolderGit2 } from "lucide-react";
 import Link from "next/link";
 
 /* ── Component ────────────────────────────────────────────────────── */
-export const ProjectSection = () => {
+const ProjectSection = () => {
   const [tooltip, setTooltip] = useState<{
     visible: boolean;
     x: number;
@@ -176,3 +176,5 @@ export const ProjectSection = () => {
     </section>
   );
 };
+
+export default ProjectSection;
